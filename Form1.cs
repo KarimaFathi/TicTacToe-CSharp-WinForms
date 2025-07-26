@@ -157,31 +157,22 @@ namespace Tic_Tac_toe
 
         private void btnRestartGame_Click(object sender, EventArgs e)
         {
-            pic1I1.Image = Properties.Resources.question_mark_96;
-            pic1I2.Image = Properties.Resources.question_mark_96;
-            pic1I3.Image = Properties.Resources.question_mark_96;
-            pic2I1.Image = Properties.Resources.question_mark_96;
-            pic2I2.Image = Properties.Resources.question_mark_96;
-            pic2I3.Image = Properties.Resources.question_mark_96;
-            pic3I1.Image = Properties.Resources.question_mark_96;
-            pic3I2.Image = Properties.Resources.question_mark_96;
-            pic3I3.Image = Properties.Resources.question_mark_96;
+            PictureBox[] allCells =
+              {
+                pic1I1, pic1I2, pic1I3,
+                pic2I1, pic2I2, pic2I3,
+                pic3I1, pic3I2, pic3I3
+            };
 
-            pic1I1.Tag = null;
-            pic1I2.Tag = null;
-            pic1I3.Tag = null;
-            pic2I1.Tag = null;
-            pic2I2.Tag = null;
-            pic2I3.Tag = null;
-            pic3I1.Tag = null;
-            pic3I2.Tag = null;
-            pic3I3.Tag = null;
-
-            lbGameWinner.Text = "In Progress";
+            foreach (var cell in allCells)
+            {
+                cell.Image = Properties.Resources.question_mark_96;
+                cell.Tag = null;
+            }
 
             player = enPlayer.player1;
-
             lbPlayerTurn.Text = "Player 1";
+            lbGameWinner.Text = "In Progress";
 
         }
     }
