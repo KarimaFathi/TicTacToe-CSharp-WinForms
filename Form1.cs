@@ -110,47 +110,52 @@ namespace Tic_Tac_toe
             HandlePlayerMove(pic3I3);
         }
 
+        private bool IsWinner(string symbol)
+        {
+            return
+                (Match(pic1I1, pic1I2, pic1I3, symbol)) ||
+                (Match(pic2I1, pic2I2, pic2I3, symbol)) ||
+                (Match(pic3I1, pic3I2, pic3I3, symbol)) ||
+                (Match(pic1I1, pic2I1, pic3I1, symbol)) ||
+                (Match(pic1I2, pic2I2, pic3I2, symbol)) ||
+                (Match(pic1I3, pic2I3, pic3I3, symbol)) ||
+                (Match(pic1I1, pic2I2, pic3I3, symbol)) ||
+                (Match(pic1I3, pic2I2, pic3I1, symbol));
+        }
+
+        private bool Match(PictureBox a, PictureBox b, PictureBox c, string symbol)
+        {
+            return Convert.ToString(a.Tag) == symbol &&
+                   Convert.ToString(b.Tag) == symbol &&
+                   Convert.ToString(c.Tag) == symbol;
+        }
+
+        private bool AllCellsFilled()
+        {
+            return pic1I1.Tag != null && pic1I2.Tag != null && pic1I3.Tag != null &&
+                   pic2I1.Tag != null && pic2I2.Tag != null && pic2I3.Tag != null &&
+                   pic3I1.Tag != null && pic3I2.Tag != null && pic3I3.Tag != null;
+        }
         private void CheckWinner()
         {
            
-            if (
-    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic1I2.Tag) == "X" && Convert.ToString(pic1I3.Tag) == "X") ||
-    (Convert.ToString(pic2I1.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic2I3.Tag) == "X") ||
-    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic2I1.Tag) == "X" && Convert.ToString(pic3I1.Tag) == "X") ||
-    (Convert.ToString(pic1I2.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I2.Tag) == "X") ||
-    (Convert.ToString(pic1I3.Tag) == "X" && Convert.ToString(pic2I3.Tag) == "X" && Convert.ToString(pic3I3.Tag) == "X") ||
-    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I3.Tag) == "X") ||
-    (Convert.ToString(pic1I3.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I1.Tag) == "X") 
-)
+            if (IsWinner("X"))
             {
                 lbGameWinner.Text = "Player 1";
-                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Player 1 Wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (
-    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic1I2.Tag) == "O" && Convert.ToString(pic1I3.Tag) == "O") ||
-    (Convert.ToString(pic2I1.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic2I3.Tag) == "O") ||
-    (Convert.ToString(pic3I1.Tag) == "O" && Convert.ToString(pic3I2.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
-    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic2I1.Tag) == "O" && Convert.ToString(pic3I1.Tag) == "O") ||
-    (Convert.ToString(pic1I2.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I2.Tag) == "O") ||
-    (Convert.ToString(pic1I3.Tag) == "O" && Convert.ToString(pic2I3.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
-    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
-    (Convert.ToString(pic1I3.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I1.Tag) == "O")
-                )
+   
+          
+            else if (IsWinner("O"))
             {
                 lbGameWinner.Text = "Player 2";
-                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("Player 2 Wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
+
+            else if (AllCellsFilled())
             {
-                if (pic1I1.Tag != null && pic1I2.Tag != null && pic1I3 != null &&
-                    pic2I1.Tag != null && pic2I2.Tag != null && pic2I3.Tag != null &&
-                    pic3I1.Tag != null && pic3I2.Tag != null && pic3I3.Tag != null)
-                {
-                    lbGameWinner.Text = "Drain";
-                    MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                lbGameWinner.Text = "Draw";
+                MessageBox.Show("It's a draw!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
