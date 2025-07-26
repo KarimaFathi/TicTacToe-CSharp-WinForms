@@ -39,6 +39,11 @@
             this.pic3I2 = new System.Windows.Forms.PictureBox();
             this.pic2I1 = new System.Windows.Forms.PictureBox();
             this.pic1I1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbPlayerTurn = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbGameWinner = new System.Windows.Forms.Label();
+            this.btnRestartGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic3I1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1I2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1I3)).BeginInit();
@@ -160,12 +165,74 @@
             this.pic1I1.TabStop = false;
             this.pic1I1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic1I1_MouseClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(141, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 65);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Turn";
+            // 
+            // lbPlayerTurn
+            // 
+            this.lbPlayerTurn.AutoSize = true;
+            this.lbPlayerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPlayerTurn.ForeColor = System.Drawing.Color.White;
+            this.lbPlayerTurn.Location = new System.Drawing.Point(110, 218);
+            this.lbPlayerTurn.Name = "lbPlayerTurn";
+            this.lbPlayerTurn.Size = new System.Drawing.Size(223, 59);
+            this.lbPlayerTurn.TabIndex = 12;
+            this.lbPlayerTurn.Text = "Player 1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.Location = new System.Drawing.Point(119, 310);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 55);
+            this.label3.TabIndex = 13;
+            this.label3.Text = " Winner";
+            // 
+            // lbGameWinner
+            // 
+            this.lbGameWinner.AutoSize = true;
+            this.lbGameWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGameWinner.ForeColor = System.Drawing.Color.LawnGreen;
+            this.lbGameWinner.Location = new System.Drawing.Point(113, 398);
+            this.lbGameWinner.Name = "lbGameWinner";
+            this.lbGameWinner.Size = new System.Drawing.Size(301, 59);
+            this.lbGameWinner.TabIndex = 14;
+            this.lbGameWinner.Text = "In Progress";
+            // 
+            // btnRestartGame
+            // 
+            this.btnRestartGame.BackColor = System.Drawing.Color.Black;
+            this.btnRestartGame.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestartGame.ForeColor = System.Drawing.Color.White;
+            this.btnRestartGame.Location = new System.Drawing.Point(113, 472);
+            this.btnRestartGame.Name = "btnRestartGame";
+            this.btnRestartGame.Size = new System.Drawing.Size(230, 73);
+            this.btnRestartGame.TabIndex = 15;
+            this.btnRestartGame.Text = "Restart Game";
+            this.btnRestartGame.UseVisualStyleBackColor = false;
+            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1082, 603);
+            this.Controls.Add(this.btnRestartGame);
+            this.Controls.Add(this.lbGameWinner);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbPlayerTurn);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pic3I1);
             this.Controls.Add(this.pic1I2);
             this.Controls.Add(this.pic1I3);
@@ -206,6 +273,11 @@
         private System.Windows.Forms.PictureBox pic1I3;
         private System.Windows.Forms.PictureBox pic1I2;
         private System.Windows.Forms.PictureBox pic3I1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbPlayerTurn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbGameWinner;
+        private System.Windows.Forms.Button btnRestartGame;
     }
 }
 

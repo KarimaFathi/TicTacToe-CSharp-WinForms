@@ -43,18 +43,23 @@ namespace Tic_Tac_toe
                 {
                     pic1I1.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic1I1.Tag = "X";
                 }
                 else
                 {
                     pic1I1.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic1I1.Tag = "O";
                 }
-                pic1I1.Tag = true;
+               
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic1I2_Click(object sender, EventArgs e)
@@ -65,18 +70,23 @@ namespace Tic_Tac_toe
                 {
                     pic1I2.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic1I2.Tag = "X";
                 }
                 else
                 {
                     pic1I2.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic1I2.Tag = "O";
                 }
-                pic1I2.Tag = true;
+              
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic1I3_Click(object sender, EventArgs e)
@@ -87,18 +97,22 @@ namespace Tic_Tac_toe
                 {
                     pic1I3.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic1I3.Tag = "X";
                 }
                 else
                 {
                     pic1I3.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic1I3.Tag = "O";
                 }
-                pic1I3.Tag = true;
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic2I1_Click(object sender, EventArgs e)
@@ -110,18 +124,23 @@ namespace Tic_Tac_toe
                 {
                     pic2I1.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic2I1.Tag = "X";
                 }
                 else
                 {
                     pic2I1.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic2I1.Tag = "O";
                 }
-                pic2I1.Tag = true;
+               
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic2I2_Click(object sender, EventArgs e)
@@ -132,18 +151,23 @@ namespace Tic_Tac_toe
                 {
                     pic2I2.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic2I2.Tag = "X";
                 }
                 else
                 {
                     pic2I2.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic2I2.Tag = "O";
                 }
-                pic2I2.Tag = true;
+                
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic2I3_Click(object sender, EventArgs e)
@@ -154,18 +178,23 @@ namespace Tic_Tac_toe
                 {
                     pic2I3.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic2I3.Tag = "X";
                 }
                 else
                 {
                     pic2I3.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic2I3.Tag = "O";
                 }
-                pic2I3.Tag = true;
+               
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic3I1_Click(object sender, EventArgs e)
@@ -176,18 +205,23 @@ namespace Tic_Tac_toe
                 {
                     pic3I1.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic3I1.Tag = "X";
                 }
                 else
                 {
                     pic3I1.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic3I1.Tag = "O";
                 }
-                pic3I1.Tag = true;
+               
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic3I2_Click(object sender, EventArgs e)
@@ -198,18 +232,23 @@ namespace Tic_Tac_toe
                 {
                     pic3I2.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic3I2.Tag = "X";
                 }
                 else
                 {
                     pic3I2.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic3I2.Tag = "O";
                 }
-                pic3I2.Tag = true;
+              
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
         }
 
         private void pic3I3_Click(object sender, EventArgs e)
@@ -220,18 +259,98 @@ namespace Tic_Tac_toe
                 {
                     pic3I3.Image = Properties.Resources.X;
                     player = enPlayer.player2;
+                    lbPlayerTurn.Text = "Player 2";
+                    pic3I3.Tag = "X";
                 }
                 else
                 {
                     pic3I3.Image = Properties.Resources.O;
                     player = enPlayer.player1;
+                    lbPlayerTurn.Text = "Player 1";
+                    pic3I3.Tag = "O";
                 }
-                pic3I3.Tag = true;
+         
             }
             else
             {
                 MessageBox.Show("Wrong choice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            checkWinner();
+        }
+
+        private void checkWinner()
+        {
+           
+            if (
+    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic1I2.Tag) == "X" && Convert.ToString(pic1I3.Tag) == "X") ||
+    (Convert.ToString(pic2I1.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic2I3.Tag) == "X") ||
+    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic2I1.Tag) == "X" && Convert.ToString(pic3I1.Tag) == "X") ||
+    (Convert.ToString(pic1I2.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I2.Tag) == "X") ||
+    (Convert.ToString(pic1I3.Tag) == "X" && Convert.ToString(pic2I3.Tag) == "X" && Convert.ToString(pic3I3.Tag) == "X") ||
+    (Convert.ToString(pic1I1.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I3.Tag) == "X") ||
+    (Convert.ToString(pic1I3.Tag) == "X" && Convert.ToString(pic2I2.Tag) == "X" && Convert.ToString(pic3I1.Tag) == "X") 
+)
+            {
+                lbGameWinner.Text = "Player 1";
+                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if (
+    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic1I2.Tag) == "O" && Convert.ToString(pic1I3.Tag) == "O") ||
+    (Convert.ToString(pic2I1.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic2I3.Tag) == "O") ||
+    (Convert.ToString(pic3I1.Tag) == "O" && Convert.ToString(pic3I2.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
+    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic2I1.Tag) == "O" && Convert.ToString(pic3I1.Tag) == "O") ||
+    (Convert.ToString(pic1I2.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I2.Tag) == "O") ||
+    (Convert.ToString(pic1I3.Tag) == "O" && Convert.ToString(pic2I3.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
+    (Convert.ToString(pic1I1.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I3.Tag) == "O") ||
+    (Convert.ToString(pic1I3.Tag) == "O" && Convert.ToString(pic2I2.Tag) == "O" && Convert.ToString(pic3I1.Tag) == "O")
+                )
+            {
+                lbGameWinner.Text = "Player 2";
+                MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                if (pic1I1.Tag != null && pic1I2.Tag != null && pic1I3 != null &&
+                    pic2I1.Tag != null && pic2I2.Tag != null && pic2I3.Tag != null &&
+                    pic3I1.Tag != null && pic3I2.Tag != null && pic3I3.Tag != null)
+                {
+                    lbGameWinner.Text = "Drain";
+                    MessageBox.Show("Game Over", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            
+        }
+
+        private void btnRestartGame_Click(object sender, EventArgs e)
+        {
+            pic1I1.Image = Properties.Resources.question_mark_96;
+            pic1I2.Image = Properties.Resources.question_mark_96;
+            pic1I3.Image = Properties.Resources.question_mark_96;
+            pic2I1.Image = Properties.Resources.question_mark_96;
+            pic2I2.Image = Properties.Resources.question_mark_96;
+            pic2I3.Image = Properties.Resources.question_mark_96;
+            pic3I1.Image = Properties.Resources.question_mark_96;
+            pic3I2.Image = Properties.Resources.question_mark_96;
+            pic3I3.Image = Properties.Resources.question_mark_96;
+
+            pic1I1.Tag = null;
+            pic1I2.Tag = null;
+            pic1I3.Tag = null;
+            pic2I1.Tag = null;
+            pic2I2.Tag = null;
+            pic2I3.Tag = null;
+            pic3I1.Tag = null;
+            pic3I2.Tag = null;
+            pic3I3.Tag = null;
+
+            lbGameWinner.Text = "In Progress";
+
+            player = enPlayer.player1;
+
+            lbPlayerTurn.Text = "Player 1";
+
         }
     }
 }
