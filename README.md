@@ -49,7 +49,8 @@ A simple two-player **Tic Tac Toe** game built with C# and Windows Forms. This p
 3. Run the project (`F5` or click **Start**).
 
 ## 📸 Screenshots
-<img width="538" height="317" alt="ProjectDemo2" src="https://github.com/user-attachments/assets/b1e14edd-3427-4130-8541-690d744305ed" />
-
-<img width="539" height="314" alt="ProjectDemo1" src="https://github.com/user-attachments/assets/6eb26b9c-46e7-4bd4-bad5-a9e2f17b7c00" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b1e14edd-3427-4130-8541-690d744305ed" alt="Project Demo 2" width="45%" style="margin-right: 10px;" />
+  <img src="https://github.com/user-attachments/assets/6eb26b9c-46e7-4bd4-bad5-a9e2f17b7c00" alt="Project Demo 1" width="45%" />
+</p>
 
