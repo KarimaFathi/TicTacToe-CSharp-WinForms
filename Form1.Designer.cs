@@ -75,7 +75,7 @@
             this.pic3I1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic3I1.TabIndex = 9;
             this.pic3I1.TabStop = false;
-            this.pic3I1.Click += new System.EventHandler(this.pic3I1_Click);
+            this.pic3I1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic1I2
             // 
@@ -86,7 +86,7 @@
             this.pic1I2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic1I2.TabIndex = 8;
             this.pic1I2.TabStop = false;
-            this.pic1I2.Click += new System.EventHandler(this.pic1I2_Click);
+            this.pic1I2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic1I3
             // 
@@ -97,7 +97,7 @@
             this.pic1I3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic1I3.TabIndex = 7;
             this.pic1I3.TabStop = false;
-            this.pic1I3.Click += new System.EventHandler(this.pic1I3_Click);
+            this.pic1I3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic2I3
             // 
@@ -108,7 +108,7 @@
             this.pic2I3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic2I3.TabIndex = 6;
             this.pic2I3.TabStop = false;
-            this.pic2I3.Click += new System.EventHandler(this.pic2I3_Click);
+            this.pic2I3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic2I2
             // 
@@ -119,7 +119,7 @@
             this.pic2I2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic2I2.TabIndex = 5;
             this.pic2I2.TabStop = false;
-            this.pic2I2.Click += new System.EventHandler(this.pic2I2_Click);
+            this.pic2I2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic3I3
             // 
@@ -130,7 +130,7 @@
             this.pic3I3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic3I3.TabIndex = 4;
             this.pic3I3.TabStop = false;
-            this.pic3I3.Click += new System.EventHandler(this.pic3I3_Click);
+            this.pic3I3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic3I2
             // 
@@ -141,7 +141,7 @@
             this.pic3I2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic3I2.TabIndex = 3;
             this.pic3I2.TabStop = false;
-            this.pic3I2.Click += new System.EventHandler(this.pic3I2_Click);
+            this.pic3I2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic2I1
             // 
@@ -152,7 +152,7 @@
             this.pic2I1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic2I1.TabIndex = 2;
             this.pic2I1.TabStop = false;
-            this.pic2I1.Click += new System.EventHandler(this.pic2I1_Click);
+            this.pic2I1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // pic1I1
             // 
@@ -163,7 +163,7 @@
             this.pic1I1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic1I1.TabIndex = 1;
             this.pic1I1.TabStop = false;
-            this.pic1I1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic1I1_MouseClick);
+            this.pic1I1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             // 
             // label2
             // 
@@ -247,6 +247,7 @@
             this.Name = "Form1";
             this.Text = "Tic-Tac-Toe Game";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pic_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pic3I1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1I2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1I3)).EndInit();

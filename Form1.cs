@@ -60,54 +60,10 @@ namespace Tic_Tac_toe
 
             CheckWinner();
         }
-        private void pic1I1_MouseClick(object sender, MouseEventArgs e)
+        private void pic_MouseClick(object sender, MouseEventArgs e)
         {
 
-            HandlePlayerMove(pic1I1);
-        }
-
-        private void pic1I2_Click(object sender, EventArgs e)
-        {
-            HandlePlayerMove(pic1I2);
-        }
-
-        private void pic1I3_Click(object sender, EventArgs e)
-        {
-            HandlePlayerMove(pic1I3);
-        }
-
-        private void pic2I1_Click(object sender, EventArgs e)
-        {
-
-            HandlePlayerMove(pic2I1);
-        }
-
-        private void pic2I2_Click(object sender, EventArgs e)
-        {
-
-            HandlePlayerMove(pic2I2);
-        }
-
-        private void pic2I3_Click(object sender, EventArgs e)
-        {
-
-            HandlePlayerMove(pic2I3);
-        }
-
-        private void pic3I1_Click(object sender, EventArgs e)
-        {
-
-            HandlePlayerMove(pic3I1);
-        }
-
-        private void pic3I2_Click(object sender, EventArgs e)
-        {
-            HandlePlayerMove(pic3I2);
-        }
-
-        private void pic3I3_Click(object sender, EventArgs e)
-        {
-            HandlePlayerMove(pic3I3);
+            HandlePlayerMove((PictureBox) sender);
         }
 
         private bool IsWinner(string symbol)
@@ -138,26 +94,57 @@ namespace Tic_Tac_toe
         }
         private void CheckWinner()
         {
-           
+            var xWinLine = GetWinningLine("X");
             if (IsWinner("X"))
             {
+                HighlightWinningLine(xWinLine);
                 lbGameWinner.Text = "Player 1";
                 MessageBox.Show("Player 1 Wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-   
-          
-            else if (IsWinner("O"))
-            {
-                lbGameWinner.Text = "Player 2";
-                MessageBox.Show("Player 2 Wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              
+                return;
             }
 
-            else if (AllCellsFilled())
+            var oWinLine = GetWinningLine("O");
+            if (IsWinner("O"))
+            {
+                HighlightWinningLine(oWinLine);
+                lbGameWinner.Text = "Player 2";
+                MessageBox.Show("Player 2 Wins!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+                return;
+            }
+
+            if (AllCellsFilled())
             {
                 lbGameWinner.Text = "Draw";
                 MessageBox.Show("It's a draw!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             
+        }
+
+        private PictureBox[] GetWinningLine(string symbol)
+        {
+            if (Match(pic1I1, pic1I2, pic1I3, symbol)) return new[] { pic1I1, pic1I2, pic1I3 };
+            if (Match(pic2I1, pic2I2, pic2I3, symbol)) return new[] { pic2I1, pic2I2, pic2I3 };
+            if (Match(pic3I1, pic3I2, pic3I3, symbol)) return new[] { pic3I1, pic3I2, pic3I3 };
+
+            if (Match(pic1I1, pic2I1, pic3I1, symbol)) return new[] { pic1I1, pic2I1, pic3I1 };
+            if (Match(pic1I2, pic2I2, pic3I2, symbol)) return new[] { pic1I2, pic2I2, pic3I2 };
+            if (Match(pic1I3, pic2I3, pic3I3, symbol)) return new[] { pic1I3, pic2I3, pic3I3 };
+
+            if (Match(pic1I1, pic2I2, pic3I3, symbol)) return new[] { pic1I1, pic2I2, pic3I3 };
+            if (Match(pic1I3, pic2I2, pic3I1, symbol)) return new[] { pic1I3, pic2I2, pic3I1 };
+
+            return null;
+        }
+
+        private void HighlightWinningLine(PictureBox[] line)
+        {
+            foreach (var box in line)
+            {
+                box.BackColor = Color.LightGreen; // You can use any color you prefer
+            }
         }
 
         private void btnRestartGame_Click(object sender, EventArgs e)
@@ -173,6 +160,7 @@ namespace Tic_Tac_toe
             {
                 cell.Image = Properties.Resources.question_mark_96;
                 cell.Tag = null;
+                cell.BackColor = Color.Transparent;
             }
 
             player = enPlayer.player1;
